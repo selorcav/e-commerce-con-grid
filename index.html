@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-commerce con Grid</title>
+</head>
+<body>
+  <!-- <div id="garden">
+    
+  </div> -->
+  <div class="container">
+    <nav>
+      <h1>Mi Ecommerce</h1>
+    </nav>
+    <aside>
+      <h3>Categorías</h3>
+      <p>Producto 1 <span>(13)</span></p>
+      <p>Producto 2 <span>(21)</span></p>
+      <p>Producto 3 <span>(41)</span></p>
+      <p>Producto 4 <span>(10)</span></p>
+    </aside>
+    <section>
+
+      <div class="card">
+        <div class="card-img">
+          <img src="https://picsum.photos/600/300" alt="Imagen Random">
+        </div>
+        <div class="card-content">
+          <h4>Producto 1</h4>
+          <p>$10.000</p>
+        </div>
+        <a class="card-button" href="#">Comprar</a>
+      </div>
+      <div class="card">
+        <div class="card-img">
+          <img src="https://picsum.photos/600/300" alt="Imagen Random">
+        </div>
+        <div class="card-content">
+          <h4>Producto 2</h4>
+          <p>$20.000</p>
+        </div>
+        <a class="card-button" href="#">Comprar</a>
+      </div>
+      <div class="card">
+        <div class="card-img">
+          <img src="https://picsum.photos/600/300" alt="Imagen Random">
+        </div>
+        <div class="card-content">
+          <h4>Producto 3</h4>
+          <p>$30.000</p>
+        </div>
+        <a class="card-button" href="#">Comprar</a>
+      </div>
+      <div class="card">
+        <div class="card-img">
+          <img src="https://picsum.photos/600/300" alt="Imagen Random">
+        </div>
+        <div class="card-content">
+          <h4>Producto 4</h4>
+          <p>$40.000</p>
+        </div>
+        <a class="card-button" href="#">Comprar</a>
+      </div>
+    </section>
+    <footer>
+      <p>@miecommerce</p>
+    </footer>
+  </div>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      border: 0;
+      vertical-align: baseline;
+      color: #1B1F21;
+      font-family: 'Open Sans', sans-serif;
+      overflow-x: hidden;
+      transition: .3s;
+    }
+    .container{
+      display: grid;
+      grid-template-areas: 
+      "nav nav"
+      "aside section"
+      "footer footer";
+      grid-template-columns: 2fr 6fr;
+      grid-template-rows: auto 1fr auto;
+      min-height: 100vh;
+    }
+    nav{
+      background-color: #3d8e8f;
+      grid-area: nav;
+    }
+    nav h1{
+      color: #fff;
+    }
+    nav, footer{
+      display: grid;
+      place-items: center;
+      padding: 1em;
+    }
+    aside, section, footer{
+      padding: 20px;
+    }
+    aside{
+      background-color: #81c7c5;
+      grid-area: aside;
+      display: flex;
+      flex-direction: column;
+    }
+    aside p, aside h3{
+      color: #fff;
+      margin: .3rem;
+    }
+    aside span{
+      color: #2f7072;
+      font-size: .8rem;
+    }
+    section{
+      grid-area: section;
+      background-image: url('https://picsum.photos/1920/1000');
+      background-size: cover;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 10px;
+    }
+    .card{
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 15px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(5px);
+      -webkit-backdrop-filter: blur(5px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .card-img{
+      max-height: 60%;
+      overflow: hidden;
+      display: grid;
+      place-items: center;
+    }
+    .card-img img{
+      width: 100%;
+      max-width: 100%;
+    }
+    .card-content{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .card p{
+      margin: .1rem;
+    }
+    .card-button{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
+      text-decoration: none;
+      color: #fff;
+      background-color: #3d8e8f;
+      transition: .3s;
+    }
+    .card-button:hover{
+      background-color: #223d3f
+    }
+    footer{
+      grid-area: footer;
+      background-color: #223d3f;
+    }
+    footer p{
+      color: #fff;
+    }
+  </style>
+</body>
+</html>
